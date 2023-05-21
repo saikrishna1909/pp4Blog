@@ -1,0 +1,41 @@
+<div class="container" >
+    <form (ngSubmit)="onRegister(f)" #f="ngForm">
+      <div class="list-group align-items-center justify-content-center">
+        <h1>Registration Page</h1>
+        <div class="list-group-item w-50">
+          <label> First Name</label
+          ><label >:<input type="text" name="firstname" ngModel /></label>
+        </div>
+        <div class="list-group-item w-50">
+          <label> Last Name</label
+          ><label >:<input type="text" name="lastname" ngModel /></label>
+        </div>
+        <div class="list-group-item w-50">
+          <label class="pr-2"> Email:</label
+          ><label class="pl-4">:<input type="text" name="email" ngModel /></label>
+        </div>
+        <div class="list-group-item w-50">
+          <label class="pr-1">Password   </label
+          ><label>:<input class="pl-2" type="password" name="password" ngModel /></label>
+        </div>
+        <div class="list-group-item w-50">
+          <label
+            ><input
+              type="submit"
+              class="btn btn-primary"
+              value="Log in"
+            /> </label
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="status">
+    <strong class="align-items-center">Registered successfully</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" [routerLink]="['app']">
+      Go to Home
+    </button>
+      </div>
+
+  
+
